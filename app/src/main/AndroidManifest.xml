@@ -3,6 +3,8 @@
     package="com.example.fileassistant">
 
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
 
     <application
         android:allowBackup="true"
@@ -12,10 +14,13 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Fileassistant">
         <activity
+            android:name=".FolderAssistant"
+            android:exported="true" />
+        <activity
             android:name=".MainActivity"
             android:exported="true" />
         <activity
-            android:name=".FolderAssistant"
+            android:name=".GeoLocationPage"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
